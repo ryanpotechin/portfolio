@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ryan Potechin — Biomedical &amp; Product Development Engineer</title>
+<meta name="description" content="Ryan Potechin — Biomedical Engineer specializing in product development, manufacturing engineering, and medical devices.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#EEF3FA;--bm:#E5EDF7;--bc:#FFFFFF;--bl:#1A56DB;--bll:#3B82F6;--bglow:rgba(26,86,219,0.07);--gr:#059669;--grl:#10B981;--t1:#0D1B3E;--t2:#374151;--t3:#6B7280;--bd:rgba(13,27,62,0.1);--bdh:rgba(26,86,219,0.35);--sh:0 2px 14px rgba(13,27,62,0.07);--shb:0 8px 28px rgba(26,86,219,0.13);--fd:'Sora',sans-serif;--fb:'Inter',sans-serif;--fm:'JetBrains Mono',monospace;--ease:cubic-bezier(0.16,1,0.3,1);--tr:.28s cubic-bezier(0.16,1,0.3,1);--r:12px;--rl:18px}
+body.dark{--bg:#09111F;--bm:#0E1828;--bc:rgba(14,22,40,0.92);--t1:#F1F5F9;--t2:#CBD5E1;--t3:#64748B;--bd:rgba(148,163,184,0.1);--bdh:rgba(59,130,246,0.4);--sh:0 4px 22px rgba(0,0,0,0.4);--shb:0 8px 28px rgba(37,99,235,0.22)}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);background:var(--bg);color:var(--t1);line-height:1.6;overflow-x:hidden;transition:background .3s,color .3s}
+a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{cursor:pointer;border:none;background:none;font-family:inherit}ul{list-style:none}
+::-webkit-scrollbar{width:5px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:rgba(26,86,219,.22);border-radius:3px}
+#sp{position:fixed;top:0;left:0;height:3px;width:0%;background:linear-gradient(90deg,var(--bl),var(--grl));z-index:1000;transition:width .1s linear}
+nav{position:fixed;top:0;left:0;right:0;z-index:900;padding:0 5%;height:64px;display:flex;align-items:center;justify-content:space-between;transition:all var(--tr)}
+nav.sc{background:rgba(238,243,250,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--bd);box-shadow:var(--sh)}
+body.dark nav.sc{background:rgba(9,17,31,.95)}
+.nlogo{font-family:var(--fd);font-weight:800;font-size:1.05rem;letter-spacing:-.03em;color:var(--t1)}.nlogo span{color:var(--bl)}
+.nlinks{display:flex;align-items:center;gap:1.35rem}
+.nlinks a{font-size:.77rem;font-weight:500;color:var(--t3);letter-spacing:.04em;text-transform:uppercase;transition:color var(--tr)}.nlinks a:hover{color:var(--t1)}
+.ncta{color:var(--bl)!important;border:1px solid rgba(26,86,219,.3);padding:.35rem .88rem;border-radius:6px;transition:all var(--tr)!important}.ncta:hover{background:var(--bglow)!important;border-color:var(--bl)!important}
+.dtog{width:32px;height:32px;border-radius:50%;border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:.88rem;color:var(--t3);transition:all var(--tr)}.dtog:hover{border-color:var(--bl);color:var(--t1)}
+.hburg{display:none;flex-direction:column;gap:5px;cursor:pointer}.hburg span{display:block;width:21px;height:2px;background:var(--t3);border-radius:2px}
+.mnav{display:none;position:fixed;inset:0;background:rgba(238,243,250,.98);backdrop-filter:blur(20px);z-index:800;flex-direction:column;align-items:center;justify-content:center;gap:2rem}
+body.dark .mnav{background:rgba(9,17,31,.98)}.mnav.open{display:flex}
+.mnav a{font-family:var(--fd);font-size:1.65rem;font-weight:700;color:var(--t3);transition:color var(--tr)}.mnav a:hover{color:var(--t1)}
+#hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:116px 5% 80px;background:linear-gradient(152deg,#E0EAF8 0%,#EEF3FA 50%,#E6EFFE 100%)}
+body.dark #hero{background:linear-gradient(152deg,#080F1C 0%,#09111F 60%,#08111F 100%)}
+#hero::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(26,86,219,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(26,86,219,.03) 1px,transparent 1px);background-size:52px 52px;opacity:.8}
+#hero::after{content:'';position:absolute;top:-10%;right:-5%;width:55%;height:80%;background:radial-gradient(ellipse,rgba(26,86,219,.05) 0%,transparent 70%);pointer-events:none}
+.hi{position:relative;z-index:1;max-width:1200px;margin:0 auto;width:100%;display:grid;grid-template-columns:1fr auto;gap:4rem;align-items:center}
+.hbadge{display:inline-flex;align-items:center;gap:.45rem;font-family:var(--fm);font-size:.67rem;color:var(--gr);border:1px solid rgba(5,150,105,.28);padding:.3rem .8rem;border-radius:100px;margin-bottom:1.25rem;letter-spacing:.08em;background:rgba(5,150,105,.05)}
+.hbadge::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--gr);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.7)}}
+.hname{font-family:var(--fd);font-size:clamp(2.6rem,5vw,4.7rem);font-weight:800;letter-spacing:-.03em;line-height:1;color:var(--t1);margin-bottom:.6rem}
+.htitle{font-family:var(--fd);font-size:clamp(.88rem,1.55vw,1.06rem);font-weight:400;color:var(--t3);margin-bottom:1.25rem;line-height:1.5}.htitle em{color:var(--bl);font-style:normal;font-weight:600}
+.hstmt{font-size:.98rem;color:var(--t2);max-width:510px;line-height:1.75;margin-bottom:1.8rem}
+.hmet{display:grid;grid-template-columns:repeat(4,1fr);gap:.82rem;margin-bottom:1.8rem;max-width:530px}
+.mc{background:var(--bc);border:1px solid var(--bd);border-radius:var(--r);padding:.82rem .92rem;box-shadow:var(--sh);transition:all var(--tr)}.mc:hover{border-color:var(--bdh);transform:translateY(-3px);box-shadow:var(--shb)}
+.mc-n{font-family:var(--fd);font-size:1.38rem;font-weight:800;color:var(--bl);letter-spacing:-.03em;line-height:1}.mc-l{font-size:.61rem;color:var(--t3);margin-top:.2rem;line-height:1.3;text-transform:uppercase;letter-spacing:.05em}
+.hact{display:flex;flex-wrap:wrap;gap:.78rem}
+.bp{display:inline-flex;align-items:center;gap:.43rem;background:var(--bl);color:#fff;font-size:.85rem;font-weight:600;padding:.76rem 1.55rem;border-radius:8px;transition:all var(--tr)}.bp:hover{background:var(--bll);transform:translateY(-2px);box-shadow:0 8px 24px rgba(26,86,219,.3)}
+.bs{display:inline-flex;align-items:center;gap:.43rem;background:var(--bc);color:var(--t1);font-size:.85rem;font-weight:500;padding:.76rem 1.55rem;border-radius:8px;border:1px solid var(--bd);transition:all var(--tr)}.bs:hover{border-color:var(--bdh);color:var(--bl);transform:translateY(-2px);box-shadow:var(--sh)}
+.hiw{position:relative;width:275px;flex-shrink:0}
+.hif{width:248px;height:286px;border-radius:20px;background:linear-gradient(135deg,#C5D5EA,#DAE8F5);border:1px solid var(--bd);overflow:hidden;position:relative;box-shadow:var(--sh)}
+body.dark .hif{background:linear-gradient(135deg,#1E3A5F,#162040)}.hif img{width:100%;height:100%;object-fit:cover}
+.hip{width:100%;height:100%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.6rem;color:var(--t3);font-size:.7rem;font-family:var(--fm);letter-spacing:.05em}.hip svg{width:46px;height:46px;opacity:.27}
+.hia{position:absolute;top:-9px;right:-9px;width:100%;height:100%;border:1px solid rgba(26,86,219,.17);border-radius:20px}
+.hit{position:absolute;bottom:-11px;left:13px;background:var(--bc);border:1px solid var(--bd);border-radius:8px;padding:.46rem .78rem;font-family:var(--fm);font-size:.64rem;color:var(--gr);white-space:nowrap;box-shadow:var(--sh)}
+section{padding:88px 5%}.si{max-width:1200px;margin:0 auto}
+.slbl{font-family:var(--fm);font-size:.66rem;color:var(--bl);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.48rem;display:flex;align-items:center;gap:.6rem}.slbl::after{content:'';height:1px;width:30px;background:rgba(26,86,219,.24)}
+.sh{font-family:var(--fd);font-size:clamp(1.65rem,3vw,2.4rem);font-weight:700;letter-spacing:-.03em;color:var(--t1);line-height:1.15;margin-bottom:.78rem}
+.ssub{font-size:.93rem;color:var(--t2);max-width:540px;line-height:1.7}
+#about{background:var(--bm)}
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;margin-top:3.1rem}
+.at p{color:var(--t2);line-height:1.8;margin-bottom:1.05rem;font-size:.93rem}.at p strong{color:var(--t1);font-weight:600}
+.ig{display:grid;grid-template-columns:1fr 1fr;gap:.48rem;margin-top:1.4rem}
+.itag{display:flex;align-items:center;gap:.48rem;padding:.48rem .8rem;border:1px solid var(--bd);border-radius:8px;font-size:.77rem;color:var(--t2);background:var(--bc);transition:all var(--tr)}.itag:hover{border-color:var(--bdh);color:var(--bl);background:var(--bglow)}
+.idot{width:5px;height:5px;border-radius:50%;background:var(--bl);flex-shrink:0}
+.tl{position:relative}.tl::before{content:'';position:absolute;left:10px;top:22px;bottom:0;width:1px;background:var(--bd)}
+.tli{display:flex;gap:1.25rem;margin-bottom:1.7rem;position:relative}
+.tld{width:22px;height:22px;border-radius:50%;background:var(--bc);border:2px solid var(--bl);flex-shrink:0;display:flex;align-items:center;justify-content:center;z-index:1}.tldi{width:7px;height:7px;border-radius:50%;background:var(--bl)}
+.tldate{font-family:var(--fm);font-size:.63rem;color:var(--bl);letter-spacing:.08em;margin-bottom:.14rem}
+.tltit{font-family:var(--fd);font-size:.9rem;font-weight:700;color:var(--t1);margin-bottom:.14rem}.tlsub{font-size:.76rem;color:var(--t3);line-height:1.5}
+#experience{background:var(--bg)}
+.ecs{margin-top:2.4rem;display:flex;flex-direction:column;gap:.95rem}
+.ec{background:var(--bc);border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;transition:border-color var(--tr),box-shadow var(--tr);box-shadow:var(--sh)}.ec:hover{border-color:var(--bdh);box-shadow:var(--shb)}
+.ech{padding:1.35rem 1.55rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;cursor:pointer}
+.ecr{display:flex;align-items:center;gap:.82rem}
+.ecl{width:40px;height:40px;border-radius:9px;background:var(--bglow);border:1px solid rgba(26,86,219,.14);display:flex;align-items:center;justify-content:center;font-family:var(--fd);font-size:.63rem;font-weight:800;color:var(--bl);flex-shrink:0}
+.ecco{font-family:var(--fd);font-size:.94rem;font-weight:700;color:var(--t1)}.ecro{font-size:.81rem;color:var(--t3);margin-top:.1rem}
+.ecrr{display:flex;flex-direction:column;align-items:flex-end;gap:.36rem}.ecdt{font-family:var(--fm);font-size:.66rem;color:var(--t3);white-space:nowrap}
+.ect{display:flex;gap:.3rem;flex-wrap:wrap;justify-content:flex-end}
+.tag{font-size:.64rem;padding:.17rem .52rem;border-radius:100px;border:1px solid var(--bd);color:var(--t3);white-space:nowrap}
+.tb{border-color:rgba(26,86,219,.27);color:var(--bl);background:var(--bglow)}.tg{border-color:rgba(5,150,105,.27);color:var(--gr);background:rgba(5,150,105,.05)}
+.etog{color:var(--t3);font-size:.98rem;transition:transform var(--tr),color var(--tr);flex-shrink:0;align-self:center}.ec.open .etog{transform:rotate(180deg);color:var(--bl)}
+.ecb{display:none;padding:0 1.55rem 1.4rem;border-top:1px solid var(--bd)}.ec.open .ecb{display:block}.ebi{padding-top:1.25rem}
+.estt{font-family:var(--fm);font-size:.63rem;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.58rem;margin-top:.95rem}.estt:first-child{margin-top:0}
+.eal{display:flex;flex-direction:column;gap:.46rem}
+.ea{display:flex;align-items:flex-start;gap:.6rem;font-size:.83rem;color:var(--t2);line-height:1.65}.ea::before{content:'→';color:var(--bl);flex-shrink:0;margin-top:.04rem}
+#skills{background:var(--bm)}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2.5rem}
+.sk{background:var(--bc);border:1px solid var(--bd);border-radius:var(--rl);padding:1.4rem;transition:all var(--tr);box-shadow:var(--sh)}.sk:hover{border-color:var(--bdh);transform:translateY(-4px);box-shadow:var(--shb)}
+.ski{width:37px;height:37px;border-radius:9px;background:var(--bglow);border:1px solid rgba(26,86,219,.13);display:flex;align-items:center;justify-content:center;margin-bottom:.9rem;font-size:1.05rem}
+.skt{font-family:var(--fd);font-size:.87rem;font-weight:700;color:var(--t1);margin-bottom:.75rem}
+.spills{display:flex;flex-wrap:wrap;gap:.36rem}.sp{font-size:.68rem;color:var(--t2);background:var(--bm);border:1px solid var(--bd);border-radius:6px;padding:.23rem .56rem}
+#projects{background:var(--bg)}
+.pf{display:flex;gap:.45rem;flex-wrap:wrap;margin:1.4rem 0 1.9rem}
+.fb{font-size:.74rem;font-weight:500;padding:.34rem .88rem;border-radius:100px;border:1px solid var(--bd);color:var(--t3);transition:all var(--tr);cursor:pointer;background:var(--bc);font-family:var(--fb)}.fb:hover{border-color:var(--bl);color:var(--bl)}.fb.act{background:var(--bl);border-color:var(--bl);color:#fff}
+.pg{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.pc{background:var(--bc);border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;cursor:pointer;transition:all var(--tr);display:flex;flex-direction:column;box-shadow:var(--sh)}.pc:hover{border-color:var(--bdh);transform:translateY(-5px);box-shadow:0 14px 34px rgba(13,27,62,.1)}.pc.hid{display:none}
+.pimg{height:172px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}.picon{font-size:2.5rem;opacity:.4}
+.plbl{position:absolute;bottom:8px;left:8px;font-family:var(--fm);font-size:.57rem;color:rgba(255,255,255,.7);background:rgba(0,0,0,.38);padding:.16rem .43rem;border-radius:4px;letter-spacing:.04em}
+.pcon{padding:1.2rem;flex:1;display:flex;flex-direction:column}
+.pcat{font-family:var(--fm);font-size:.61rem;color:var(--bl);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.4rem}
+.ptit{font-family:var(--fd);font-size:.9rem;font-weight:700;color:var(--t1);margin-bottom:.44rem;line-height:1.3}
+.psum{font-size:.78rem;color:var(--t2);line-height:1.62;flex:1}
+.pft{display:flex;align-items:center;justify-content:space-between;margin-top:.9rem;padding-top:.78rem;border-top:1px solid var(--bd)}
+.parr{color:var(--t3);font-size:.83rem;transition:all var(--tr);flex-shrink:0}.pc:hover .parr{color:var(--bl);transform:translate(3px,-3px)}
+.padd{grid-column:1/-1;border:2px dashed var(--bd);border-radius:var(--rl);padding:1.9rem;display:flex;flex-direction:column;align-items:center;gap:.55rem;color:var(--t3);transition:all var(--tr)}.padd:hover{border-color:var(--bdh);color:var(--bl)}
+.padd-t{font-family:var(--fd);font-size:.88rem;font-weight:700}.padd-s{font-size:.78rem;text-align:center;max-width:300px;line-height:1.5}
+.mo{display:none;position:fixed;inset:0;background:rgba(13,27,62,.55);backdrop-filter:blur(10px);z-index:1000;align-items:center;justify-content:center;padding:1.6rem}.mo.open{display:flex}
+.md{background:var(--bc);border:1px solid var(--bd);border-radius:var(--rl);max-width:900px;width:100%;max-height:91vh;overflow:hidden;position:relative;box-shadow:0 22px 70px rgba(13,27,62,.18);display:flex;flex-direction:column}
+.mdh{padding:1.4rem 1.4rem 1.1rem;border-bottom:1px solid var(--bd);background:var(--bc);z-index:2;flex-shrink:0}
+.mdc{position:absolute;top:.85rem;right:.85rem;width:28px;height:28px;border-radius:50%;background:var(--bm);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;color:var(--t3);font-size:.8rem;cursor:pointer;transition:all var(--tr)}.mdc:hover{background:var(--bd);color:var(--t1)}
+.mdbody{display:flex;flex:1;min-height:0;overflow:hidden}
+.mdl{flex:1;padding:1.4rem;overflow-y:auto;min-width:0}
+.mds{margin-bottom:1.35rem}.mdst{font-family:var(--fm);font-size:.62rem;color:var(--t3);letter-spacing:.12em;text-transform:uppercase;margin-bottom:.52rem}
+.mds p{font-size:.83rem;color:var(--t2);line-height:1.72}
+.mdtags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.55rem}
+.mdr{width:340px;flex-shrink:0;border-left:1px solid var(--bd);background:var(--bm);display:flex;flex-direction:column;min-height:0}
+.mdr-head{padding:.82rem 1rem;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.mdr-title{font-family:var(--fm);font-size:.64rem;color:var(--bl);letter-spacing:.1em;text-transform:uppercase}
+.mdr-btn{font-size:.69rem;font-weight:600;padding:.26rem .68rem;border-radius:6px;border:1px solid var(--bd);color:var(--t3);transition:all var(--tr);cursor:pointer;background:transparent;font-family:var(--fb)}.mdr-btn:hover{border-color:var(--bl);color:var(--bl)}
+.mdr-btn.prim{background:var(--bl);border-color:var(--bl);color:#fff}.mdr-btn.prim:hover{background:var(--bll)}
+.mdr-fw{flex:1;overflow:hidden;position:relative;min-height:320px}.mdr-fw iframe{width:100%;height:100%;border:none;display:block}
+.mdr-ph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.7rem;padding:1.3rem;text-align:center}
+.mdr-ph-icon{font-size:2.2rem;opacity:.28}.mdr-ph p{font-size:.76rem;color:var(--t3);line-height:1.55}
+.mdr-ph .bhst{display:inline-block;font-size:.75rem;font-weight:600;color:var(--bl);padding:.42rem .92rem;border:1px solid var(--bdh);border-radius:7px;transition:all var(--tr);margin-top:.2rem;cursor:pointer}.mdr-ph .bhst:hover{background:var(--bglow)}
+.mdr-lock{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.65rem;padding:1.3rem;text-align:center}
+.mdr-lock-icon{font-size:2.8rem;opacity:.2}.mdr-lock p{font-size:.76rem;color:var(--t3);line-height:1.5}
+#leadership{background:var(--bm)}
+.lg{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:2.5rem}
+.lc{background:var(--bc);border:1px solid var(--bd);border-radius:var(--rl);padding:1.5rem;transition:all var(--tr);display:flex;flex-direction:column;gap:.72rem;box-shadow:var(--sh)}.lc:hover{border-color:var(--bdh);transform:translateY(-4px);box-shadow:var(--shb)}
+.lch{display:flex;align-items:center;gap:.75rem}
+.lci{width:42px;height:42px;border-radius:10px;background:var(--bglow);border:1px solid rgba(26,86,219,.13);display:flex;align-items:center;justify-content:center;font-size:.76rem;font-weight:800;font-family:var(--fd);color:var(--bl);flex-shrink:0;line-height:1.2;text-align:center}
+.lct{font-family:var(--fd);font-size:.9rem;font-weight:700;color:var(--t1)}.lco{font-size:.75rem;color:var(--t3);margin-top:.07rem}
+.lcb{font-size:.79rem;color:var(--t2);line-height:1.67}
+.lcbul{display:flex;flex-direction:column;gap:.36rem;margin-top:.5rem}
+.lcli{display:flex;align-items:flex-start;gap:.52rem;font-size:.77rem;color:var(--t2);line-height:1.6}.lcli::before{content:'·';color:var(--bl);font-size:1rem;flex-shrink:0;margin-top:-.04rem}
+.lcm{display:flex;gap:1.2rem;padding-top:.55rem;border-top:1px solid var(--bd);flex-wrap:wrap}
+.mn{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:var(--bl);line-height:1}.ml{font-size:.6rem;color:var(--t3);margin-top:.15rem;text-transform:uppercase;letter-spacing:.05em}
+#interests{background:var(--bg)}
+.intg{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.intc{background:var(--bc);border:1px solid var(--bd);border-radius:var(--rl);overflow:hidden;transition:all var(--tr);box-shadow:var(--sh);text-align:center}.intc:hover{border-color:var(--bdh);transform:translateY(-4px);box-shadow:var(--shb)}
+.intc-img{height:115px;display:flex;align-items:center;justify-content:center;font-size:2.7rem}
+.intc-title{font-family:var(--fd);font-size:.86rem;font-weight:700;color:var(--t1);margin-bottom:.3rem}
+.intc-body{padding:1rem}.intc-text{font-size:.74rem;color:var(--t3);line-height:1.52}
+#contact{background:var(--bm)}
+.coi{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start}
+.cocta{font-family:var(--fd);font-size:clamp(1.35rem,2.5vw,1.9rem);font-weight:700;color:var(--t1);letter-spacing:-.02em;line-height:1.25;margin-bottom:.9rem}.cocta span{color:var(--bl)}
+.cotxt{font-size:.9rem;color:var(--t2);line-height:1.7;margin-bottom:1.45rem}
+.clinks{display:flex;flex-direction:column;gap:.7rem}
+.cl{display:flex;align-items:center;gap:.82rem;padding:.86rem 1rem;background:var(--bc);border:1px solid var(--bd);border-radius:var(--r);color:var(--t2);font-size:.82rem;transition:all var(--tr);box-shadow:var(--sh)}.cl:hover{border-color:var(--bdh);color:var(--t1);transform:translateX(4px)}
+.cli{width:30px;height:30px;border-radius:7px;background:var(--bglow);display:flex;align-items:center;justify-content:center;font-size:.76rem;font-weight:700;color:var(--bl);flex-shrink:0}
+.cllab{font-weight:600}.clsub{font-size:.69rem;color:var(--t3);margin-top:.06rem}
+.clarr{margin-left:auto;color:var(--t3);transition:transform var(--tr);font-size:.78rem}.cl:hover .clarr{transform:translateX(4px);color:var(--bl)}
+.cf{display:flex;flex-direction:column;gap:.78rem}.fg{display:flex;flex-direction:column;gap:.28rem}
+.flbl{font-size:.68rem;font-weight:600;color:var(--t3);letter-spacing:.04em;text-transform:uppercase}
+.fi{background:var(--bc);border:1px solid var(--bd);border-radius:8px;padding:.72rem .9rem;color:var(--t1);font-family:var(--fb);font-size:.84rem;transition:border-color var(--tr),box-shadow var(--tr);outline:none;width:100%}.fi:focus{border-color:var(--bl);box-shadow:0 0 0 3px var(--bglow)}.fi::placeholder{color:var(--t3)}
+textarea.fi{resize:vertical;min-height:98px}
+footer{padding:1.45rem 5%;border-top:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;background:var(--bg)}
+.fl2{font-size:.72rem;color:var(--t3)}.fl2 span{color:var(--t2)}.fr{display:flex;gap:1.25rem}.fr a{font-size:.72rem;color:var(--t3);transition:color var(--tr)}.fr a:hover{color:var(--t1)}
+.rv{opacity:0;transform:translateY(20px);transition:opacity .55s var(--ease),transform .55s var(--ease)}.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}
+@media(max-width:960px){.hi{grid-template-columns:1fr}.hiw{display:none}.hmet{grid-template-columns:repeat(2,1fr)}.ag{grid-template-columns:1fr;gap:2.6rem}.sg{grid-template-columns:repeat(2,1fr)}.pg{grid-template-columns:repeat(2,1fr)}.coi{grid-template-columns:1fr;gap:2.6rem}.lg{grid-template-columns:1fr}.intg{grid-template-columns:repeat(2,1fr)}.mdbody{flex-direction:column}.mdr{width:100%;border-left:none;border-top:1px solid var(--bd)}.mdr-fw{min-height:280px}}
+@media(max-width:640px){section{padding:56px 5%}.nlinks{display:none}.hburg{display:flex}.hmet{grid-template-columns:repeat(2,1fr)}.sg,.pg{grid-template-columns:1fr}.ig,.intg{grid-template-columns:repeat(2,1fr)}.mo{padding:.65rem}.md{max-height:96vh}}
+</style>
+</head>
+<body>
+<div id="sp"></div>
+<nav id="nb">
+<a class="nlogo" href="#hero">Ryan<span>.</span></a>
+<div class="nlinks">
+  <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a>
+  <a href="#leadership">Leadership</a><a href="#interests">Interests</a><a href="#contact">Contact</a>
+  <a href="#contact" class="ncta">Hire Me</a>
+</div>
+<div style="display:flex;align-items:center;gap:.62rem">
+  <button class="dtog" id="dt" title="Toggle theme">🌙</button>
+  <div class="hburg" id="hb" onclick="tmn()"><span></span><span></span><span></span></div>
+</div>
+</nav>
+<div class="mnav" id="mn">
+  <a href="#about" onclick="tmn()">About</a><a href="#experience" onclick="tmn()">Experience</a>
+  <a href="#skills" onclick="tmn()">Skills</a><a href="#projects" onclick="tmn()">Projects</a>
+  <a href="#leadership" onclick="tmn()">Leadership</a><a href="#interests" onclick="tmn()">Interests</a>
+  <a href="#contact" onclick="tmn()">Contact</a>
+</div>
+<section id="hero">
+<div class="hi">
+<div>
+  <div class="hbadge">Open to New Opportunities</div>
+  <h1 class="hname">Ryan Potechin</h1>
+  <p class="htitle">Biomedical &amp; Mechanical Engineer &nbsp;&middot;&nbsp; <em>Product Development</em> &nbsp;&middot;&nbsp; Manufacturing &amp; Robotics</p>
+  <p class="hstmt">I design, validate, and manufacture products that work &mdash; from catheter prototypes in ISO cleanrooms to $3M+ robotic grinding systems processing over a million orthopedic parts per year.</p>
+  <div class="hmet">
+    <div class="mc"><div class="mc-n">$3M+</div><div class="mc-l">Equipment Led at J&amp;J</div></div>
+    <div class="mc"><div class="mc-n">300%</div><div class="mc-l">Capacity Increase</div></div>
+    <div class="mc"><div class="mc-n">20%</div><div class="mc-l">Efficiency Gain (Resonetics)</div></div>
+    <div class="mc"><div class="mc-n">3.92</div><div class="mc-l">MS GPA &middot; Northeastern</div></div>
+  </div>
+  <div class="hact">
+    <a href="#projects" class="bp"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>View Projects</a>
+    <a href="#" class="bs" onclick="alert('Add your resume PDF link here.');return false;"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>Download Resume</a>
+    <a href="#contact" class="bs">Contact Me</a>
+  </div>
+</div>
+<div class="hiw">
+  <div class="hif"><div class="hip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg><span>headshot.jpg</span></div></div>
+  <div class="hia"></div>
+  <div class="hit">// B.S. &amp; M.S. &middot; NORTHEASTERN</div>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="si">
+  <div class="slbl">01 &middot; About</div>
+  <h2 class="sh">Built to Solve Hard Problems</h2>
+  <div class="ag">
+    <div class="at rv">
+      <p>I&rsquo;m a biomedical and mechanical engineer holding a B.S. in Bioengineering (Summa Cum Laude, GPA&nbsp;3.90) and an M.S. in Product Development (GPA&nbsp;3.92) from Northeastern University, where I was a Dean&rsquo;s Scholarship recipient throughout. My career spans orthopedic manufacturing robotics, catheter development, wearable insulin delivery, and emergency medicine.</p>
+      <p>At Johnson &amp; Johnson DePuy Synthes, I serve as technical SME and lead engineer for <strong>over $3M in new robotic equipment</strong> within a $100M capacity expansion. I own the full lifecycle of a customized ABB grinding system &mdash; robot programming across 185 unique products maintaining &plusmn;5mm precision on 1M+ parts/year &mdash; through IQ/OQ/PV validation and Siemens NX fixture design, enabling a 300% increase in orthopedic output capacity.</p>
+      <p>I&rsquo;m driven by the full product lifecycle: the moment a concept sketch becomes a validated, manufactured product that works reliably at scale. Whether writing a V&amp;V protocol, machining a fixture, or programming a robot, I bring <strong>structured thinking and hands-on ownership</strong> to every problem.</p>
+      <div class="ig">
+        <div class="itag"><span class="idot"></span>Medical Devices</div>
+        <div class="itag"><span class="idot"></span>Robotics &amp; Automation</div>
+        <div class="itag"><span class="idot"></span>Wearable Technology</div>
+        <div class="itag"><span class="idot"></span>Manufacturing Engineering</div>
+        <div class="itag"><span class="idot"></span>Product Development</div>
+        <div class="itag"><span class="idot"></span>Consumer Products</div>
+      </div>
+    </div>
+    <div class="rv d1">
+      <div class="slbl" style="margin-bottom:1.05rem">Career Timeline</div>
+      <div class="tl"><div class="tli"><div class="tld"><div class="tldi"></div></div><div><div class="tldate">Sep 2020 &ndash; May 2024</div><div class="tltit">Northeastern University</div><div class="tlsub">B.S. Bioengineering &middot; Biomedical Devices &amp; Bioimaging<br>Summa Cum Laude &middot; GPA 3.90 &middot; Dean&rsquo;s Scholarship</div></div></div><div class="tli"><div class="tld"><div class="tldi"></div></div><div><div class="tldate">Jan &ndash; Aug 2022</div><div class="tltit">Insulet Corporation</div><div class="tlsub">Systems Engineering Co-op &middot; OmniPod 5 Wearable Insulin Delivery</div></div></div><div class="tli"><div class="tld"><div class="tldi"></div></div><div><div class="tldate">Jan &ndash; Jul 2023</div><div class="tltit">Resonetics LLC</div><div class="tlsub">Development Engineering Co-op &middot; Catheter Design &amp; V&amp;V</div></div></div><div class="tli"><div class="tld"><div class="tldi"></div></div><div><div class="tldate">Sep 2024 &ndash; May 2025</div><div class="tltit">Northeastern University</div><div class="tlsub">M.S. Product Development &middot; GPA 3.92</div></div></div><div class="tli"><div class="tld"><div class="tldi"></div></div><div><div class="tldate">May 2025 &ndash; Present</div><div class="tltit">Johnson &amp; Johnson &middot; DePuy Synthes</div><div class="tlsub">Manufacturing / Project / Validation Engineer<br>$100M Orthopedic Foundry Expansion &middot; Raynham, MA</div></div></div></div>
+    </div>
+  </div>
+</div>
+</section>
+<section id="experience">
+<div class="si">
+  <div class="slbl">02 &middot; Experience</div>
+  <h2 class="sh">Where I&rsquo;ve Built</h2>
+  <p class="ssub">Roles spanning orthopedic manufacturing robotics, catheter development, wearable insulin delivery, and emergency medicine.</p>
+  <div class="ecs">
+<div class="ec rv" onclick="texp(this)">
+<div class="ech"><div class="ecr"><div class="ecl">J&J</div><div><div class="ecco">Johnson &amp; Johnson &middot; DePuy Synthes</div><div class="ecro">Manufacturing / Project / Validation Engineer &middot; Raynham, MA</div></div></div>
+<div class="ecrr"><div class="ecdt">May 2025 &ndash; Present</div><div class="ect"><span class="tag tb">Medical Devices</span><span class="tag tg">Full-Time</span></div></div><div class="etog">▾</div></div>
+<div class="ecb"><div class="ebi"><div class="estt">Key Accomplishments</div><div class="eal"><div class="ea">Technical SME and lead engineer for $3M+ in new equipment within a $100M orthopedic manufacturing capacity expansion, directly enabling a 300% increase in output capacity.</div><div class="ea">Sole functional owner of a $3M+ customized ABB robotic grinding system &mdash; RobotStudio programming (185 unique products, &plusmn;5mm on 1M+ parts/year), commissioning (URS, FAT/SAT), and full SBD/CSV-e/IQ/PV validation strategy.</div><div class="ea">Designed custom workholding fixtures in Siemens NX applying DFM, material selection, and GD&T principles to support validation and optimize throughput.</div><div class="ea">Implemented Allen-Bradley PLC/HMI systems into GMP medical device manufacturing; managed full SDLC documentation throughout.</div><div class="ea">Led cross-functional quality, regulatory, and training alignment; managed Gantt charts, budgeting, FPX project management, and on-time deployment milestones.</div></div>
+<div class="estt">Technologies</div><div class="ect" style="padding-top:.1rem"><span class="tag">Siemens NX</span><span class="tag">ABB RobotStudio</span><span class="tag">Allen-Bradley PLC</span><span class="tag">IQ/OQ/PV</span><span class="tag">CSV-e/SBD</span><span class="tag">GD&T</span><span class="tag">GxP/GDP</span><span class="tag">Arena PLM</span></div></div></div></div>
+<div class="ec rv d1" onclick="texp(this)">
+<div class="ech"><div class="ecr"><div class="ecl">RES</div><div><div class="ecco">Resonetics LLC</div><div class="ecro">Development Engineering Co-op &middot; Westborough, MA</div></div></div>
+<div class="ecrr"><div class="ecdt">Jan &ndash; Jul 2023</div><div class="ect"><span class="tag tb">Catheter Dev</span><span class="tag">Co-op</span></div></div><div class="etog">▾</div></div>
+<div class="ecb"><div class="ebi"><div class="estt">Key Accomplishments</div><div class="eal"><div class="ea">Designed and developed catheters for TMVR, imaging, and normal pressure hydrocephalus treatment from concept through V&V.</div><div class="ea">Designed test fixtures in SolidWorks improving manufacturing process efficiency by up to 20%.</div><div class="ea">Performed tensile testing, tortuous anatomy testing, and V&V studies; collaborated with physicians in animal studies.</div><div class="ea">Authored manufacturing SOPs and implemented them in an ISO-certified cleanroom environment.</div></div>
+<div class="estt">Technologies</div><div class="ect" style="padding-top:.1rem"><span class="tag">SolidWorks</span><span class="tag">Fixture Design</span><span class="tag">V&V Testing</span><span class="tag">ISO Cleanroom</span><span class="tag">SOP Authoring</span></div></div></div></div>
+<div class="ec rv d2" onclick="texp(this)">
+<div class="ech"><div class="ecr"><div class="ecl">INS</div><div><div class="ecco">Insulet Corporation</div><div class="ecro">Systems Engineering Co-op &middot; Acton, MA</div></div></div>
+<div class="ecrr"><div class="ecdt">Jan &ndash; Aug 2022</div><div class="ect"><span class="tag tb">Wearables</span><span class="tag">Co-op</span></div></div><div class="etog">▾</div></div>
+<div class="ecb"><div class="ebi"><div class="estt">Key Accomplishments</div><div class="eal"><div class="ea">Developed and refined product requirements based on user needs as part of the design control process for the OmniPod 5 wearable insulin delivery system.</div><div class="ea">Applied ISO 14971 risk management; authored SHA and DFMEA updates. Built MATLAB tools to automate documentation processes.</div><div class="ea">Led cross-functional technical reviews to align quality and engineering teams on requirement changes.</div></div>
+<div class="estt">Technologies</div><div class="ect" style="padding-top:.1rem"><span class="tag">ISO 14971</span><span class="tag">DFMEA</span><span class="tag">Design Controls</span><span class="tag">SHA</span><span class="tag">MATLAB</span></div></div></div></div>
+<div class="ec rv" onclick="texp(this)">
+<div class="ech"><div class="ecr"><div class="ecl">NEU</div><div><div class="ecco">Northeastern University &mdash; Teaching Assistant</div><div class="ecro">Cornerstone of Engineering &amp; Biomechanics &middot; Boston, MA</div></div></div>
+<div class="ecrr"><div class="ecdt">Jan&ndash;Apr 2022 &amp; 2023</div><div class="ect"><span class="tag tb">Academia</span></div></div><div class="etog">▾</div></div>
+<div class="ecb"><div class="ebi"><div class="estt">Key Accomplishments</div><div class="eal"><div class="ea">Aided students in learning engineering principles as TA for Cornerstone of Engineering (freshman design course) and Biomechanics over two separate semesters.</div><div class="ea">Assisted professor in creating and grading quizzes, tests, and homework assignments.</div><div class="ea">Also served as GE1000 Peer Mentor (Sep&ndash;Dec 2022), co-facilitating sessions on major selection, co-op, and time management for incoming students.</div></div>
+<div class="estt">Technologies</div><div class="ect" style="padding-top:.1rem"></div></div></div></div>
+<div class="ec rv d1" onclick="texp(this)">
+<div class="ech"><div class="ecr"><div class="ecl">EMT</div><div><div class="ecco">Springfield First Aid Squad</div><div class="ecro">Emergency Medical Technician &middot; Springfield, NJ</div></div></div>
+<div class="ecrr"><div class="ecdt">Mar 2018 &ndash; Mar 2023</div><div class="ect"><span class="tag tg">EMT-B Certified</span></div></div><div class="etog">▾</div></div>
+<div class="ecb"><div class="ebi"><div class="estt">Key Accomplishments</div><div class="eal"><div class="ea">Rode 400+ hours responding to 911 emergency calls; provided emergency care and coordinated with police, fire, and hospital personnel.</div><div class="ea">Managed patient documentation and ensured proper handoffs to hospital staff. Certified in CPR, BLS, First Aid, and AED.</div><div class="ea">Served as Cadet Leader, leading training sessions and planning outreach events for the cadet program.</div></div>
+<div class="estt">Technologies</div><div class="ect" style="padding-top:.1rem"></div></div></div></div>
+  </div>
+</div>
+</section>
+<section id="skills">
+<div class="si">
+  <div class="slbl">03 &middot; Skills</div>
+  <h2 class="sh">Technical Toolkit</h2>
+  <p class="ssub">Hands-on capabilities built across robotics, medical device development, manufacturing, and product engineering.</p>
+  <div class="sg">
+<div class="sk rv"><div class="ski">⚙️</div><div class="skt">CAD &amp; Engineering Software</div><div class="spills"><span class="sp">Siemens NX</span><span class="sp">SolidWorks</span><span class="sp">AutoCAD</span><span class="sp">MATLAB</span><span class="sp">ABB RobotStudio</span><span class="sp">JIRA/Confluence</span><span class="sp">Arena PLM</span><span class="sp">Helix ALM</span><span class="sp">C++/Arduino</span></div></div>
+<div class="sk rv d1"><div class="ski">🤖</div><div class="skt">Robotics &amp; Automation</div><div class="spills"><span class="sp">ABB Robots</span><span class="sp">RobotStudio</span><span class="sp">Allen-Bradley PLC</span><span class="sp">HMI Programming</span><span class="sp">Equipment Commissioning</span><span class="sp">FAT/SAT/URS</span><span class="sp">Process Characterization</span></div></div>
+<div class="sk rv d2"><div class="ski">🔬</div><div class="skt">Verification &amp; Validation</div><div class="spills"><span class="sp">IQ/OQ/PQ/PV</span><span class="sp">CSV-e/SBD</span><span class="sp">Process Validation</span><span class="sp">DFMEA</span><span class="sp">ISO 14971</span><span class="sp">Design Controls</span><span class="sp">Test Protocol Authoring</span></div></div>
+<div class="sk rv"><div class="ski">🏭</div><div class="skt">Manufacturing &amp; Quality</div><div class="spills"><span class="sp">Fixture Design</span><span class="sp">GD&T</span><span class="sp">DFM</span><span class="sp">GxP/GDP</span><span class="sp">ISO 13485</span><span class="sp">DHF/DMR/BOM</span><span class="sp">Cleanroom Procedures</span><span class="sp">SDLC</span></div></div>
+<div class="sk rv d1"><div class="ski">🖨️</div><div class="skt">Prototyping &amp; Fabrication</div><div class="spills"><span class="sp">FDM 3D Printing</span><span class="sp">SLA Printing</span><span class="sp">Laser Cutting</span><span class="sp">Mill &amp; Lathe</span><span class="sp">Laser Welding</span><span class="sp">Soldering</span><span class="sp">Vertical Laminator</span></div></div>
+<div class="sk rv d2"><div class="ski">📋</div><div class="skt">Project &amp; Documentation</div><div class="spills"><span class="sp">Technical Writing</span><span class="sp">SOPs</span><span class="sp">Gantt Charts</span><span class="sp">FPX/Budgeting</span><span class="sp">Change Control</span><span class="sp">Cross-Functional Leadership</span></div></div>
+  </div>
+</div>
+</section>
+<section id="projects">
+<div class="si">
+  <div class="slbl">04 &middot; Projects</div>
+  <h2 class="sh">Featured Work</h2>
+  <p class="ssub">Click any project to read the full engineering story and view or download the original deliverable.</p>
+  <div class="pf">
+    <button class="fb act" onclick="fp('all',this)">All Projects</button>
+    <button class="fb" onclick="fp('medical',this)">Medical Devices</button>
+    <button class="fb" onclick="fp('product',this)">Product Dev</button>
+    <button class="fb" onclick="fp('consumer',this)">Consumer</button>
+    <button class="fb" onclick="fp('capstone',this)">Capstone</button>
+    <button class="fb" onclick="fp('sports',this)">Sports Tech</button>
+  </div>
+  <div class="pg" id="pg">
+<div class="pc rv" data-cat="medical" onclick="om('jnj')">
+<div class="pimg" style="background:linear-gradient(135deg,#16311f,#0d1e12)"><div class="picon">🤖</div><div class="plbl">ORTHO &middot; ROBOTICS &middot; $3M+</div></div>
+<div class="pcon"><div class="pcat">Medical Manufacturing &middot; Robotics</div><div class="ptit">Robotic Grinding System &mdash; J&amp;J DePuy Synthes</div><div class="psum">Lead engineer for $3M+ ABB robotic grinding system within a $100M capacity expansion. 185-product programs at &plusmn;5mm precision on 1M+ parts/year. Full IQ/OQ/PV validation and 300% output increase.</div>
+<div class="pft"><div class="ect"><span class="tag tb">ABB RobotStudio</span><span class="tag">IQ/OQ/PV</span></div><div class="parr">↗</div></div></div></div>
+<div class="pc rv d1" data-cat="product consumer" onclick="om('dd')">
+<div class="pimg" style="background:linear-gradient(135deg,#183530,#0e2018)"><div class="picon">🌀</div><div class="plbl">CONSUMER &middot; MS CAPSTONE</div></div>
+<div class="pcon"><div class="pcat">Consumer Product &middot; MS Capstone</div><div class="ptit">Disposal Defense &mdash; Garbage Disposal Safety Insert</div><div class="psum">Full PD lifecycle: 14-person user survey, IP search, 12 concept sketches, two Pugh matrix rounds, SolidWorks CAD, injection-moldable engineering drawings, costed BOM ($3/unit), and a physical FDM prototype.</div>
+<div class="pft"><div class="ect"><span class="tag tb">SolidWorks</span><span class="tag">Injection Molding</span></div><div class="parr">↗</div></div></div></div>
+<div class="pc rv d2" data-cat="medical capstone" onclick="om('mc')">
+<div class="pimg" style="background:linear-gradient(135deg,#0f1a38,#0a1224)"><div class="picon">📱</div><div class="plbl">MEDICAL APP &middot; PROJECT LEAD</div></div>
+<div class="pcon"><div class="pcat">Medical App &middot; Bioengineering Capstone Lead</div><div class="ptit">MedCheckMe &mdash; Smartphone Medical Diagnostic App</div><div class="psum">Led 7-person team building a sub-$1 smartphone screening platform for Haiti &amp; Costa Rica. PPG-based heart rate &amp; BP via MATLAB, plus audiology, optometry, and dermatology modules on Android.</div>
+<div class="pft"><div class="ect"><span class="tag tb">MATLAB/PPG</span><span class="tag">Machine Learning</span></div><div class="parr">↗</div></div></div></div>
+<div class="pc rv" data-cat="medical" onclick="om('res')">
+<div class="pimg" style="background:linear-gradient(135deg,#19193a,#0f0f26)"><div class="picon">🔬</div><div class="plbl">CATHETER &middot; TMVR &middot; ISO CLEANROOM</div></div>
+<div class="pcon"><div class="pcat">Medical Device &middot; Catheter Development</div><div class="ptit">Catheter Design &amp; V&amp;V &mdash; Resonetics</div><div class="psum">Designed catheters for TMVR, imaging, and normal pressure hydrocephalus. Fixtures improved process efficiency 20%. V&amp;V studies, physician collaboration, and SOP authoring in ISO cleanroom.</div>
+<div class="pft"><div class="ect"><span class="tag tb">SolidWorks</span><span class="tag">Cleanroom V&V</span></div><div class="parr">↗</div></div></div></div>
+<div class="pc rv d1" data-cat="product consumer sports" onclick="om('ss')">
+<div class="pimg" style="background:linear-gradient(135deg,#1a1020,#110a14)"><div class="picon">⛸️</div><div class="plbl">SPORTS TECH &middot; CONSUMER &middot; MS</div></div>
+<div class="pcon"><div class="pcat">Sports Technology &middot; Product Development</div><div class="ptit">SkateSharp &mdash; Portable Skate Sharpening Device</div><div class="psum">Designed a portable, consistent hockey skate sharpener targeting a gap in the $500M market. Competitor analysis, user personas, Stage-Gate development roadmap, and go-to-market strategy.</div>
+<div class="pft"><div class="ect"><span class="tag tb">Product Strategy</span><span class="tag">Stage-Gate</span></div><div class="parr">↗</div></div></div></div>
+<div class="pc rv d2" data-cat="medical product capstone" onclick="om('ra')">
+<div class="pimg" style="background:linear-gradient(135deg,#1a1030,#110a1e)"><div class="picon">🏥</div><div class="plbl">HEALTHCARE &middot; ER MANAGEMENT &middot; MS</div></div>
+<div class="pcon"><div class="pcat">Healthcare Tech &middot; MS Product Development</div><div class="ptit">RapidAlign &mdash; ER Resource Management Platform</div><div class="psum">Product strategy for a unified ER platform targeting a $1B market. Validated through 10 ED worker interviews. Targets 20% triage wait reduction, 30% faster resource location, HIPAA-compliant RTLS integration.</div>
+<div class="pft"><div class="ect"><span class="tag tb">Customer Discovery</span><span class="tag">Market Analysis</span></div><div class="parr">↗</div></div></div></div>
+<div class="pc rv" data-cat="medical capstone" onclick="om('evar')">
+<div class="pimg" style="background:linear-gradient(135deg,#102030,#081420)"><div class="picon">🫀</div><div class="plbl">ENDOVASCULAR &middot; DESIGN OF IMPLANTS</div></div>
+<div class="pcon"><div class="pcat">Medical Device &middot; Design of Implants Course</div><div class="ptit">Endovascular Stent &mdash; Unmet Clinical Need</div><div class="psum">Collaborated with classmates and industry professionals to identify an unmet clinical need in endovascular stents, design a solution, and prepare a notice of invention submission.</div>
+<div class="pft"><div class="ect"><span class="tag tb">Implant Design</span><span class="tag">Clinical Need</span></div><div class="parr">↗</div></div></div></div>
+<div class="pc rv d1" data-cat="product" onclick="om('bocce')">
+<div class="pimg" style="background:linear-gradient(135deg,#291a10,#180f08)"><div class="picon">♿</div><div class="plbl">ADAPTIVE &middot; COMMUNITY &middot; ENGINEERING LEAD</div></div>
+<div class="pcon"><div class="pcat">Adaptive Engineering &middot; Community Impact</div><div class="ptit">Adaptive Bocce Ramp &mdash; Boston Self Help Center</div><div class="psum">Engineering lead managing a team to design and fabricate an adaptive bocce ramp for people with upper arm mobility limitations. SolidWorks modeling, laser cutting, and power tool fabrication.</div>
+<div class="pft"><div class="ect"><span class="tag tb">SolidWorks</span><span class="tag">Fabrication</span></div><div class="parr">↗</div></div></div></div>
+    <div class="padd rv d2"><div style="font-size:1.6rem;opacity:.28">&#xFF0B;</div><div class="padd-t">More Projects Coming</div><div class="padd-s">Space reserved for additional J&amp;J manufacturing projects, Resonetics work, and personal engineering builds.</div></div>
+  </div>
+</div>
+</section>
+<section id="leadership">
+<div class="si">
+  <div class="slbl">05 &middot; Leadership &amp; Involvement</div>
+  <h2 class="sh">Giving Back, Building Up</h2>
+  <p class="ssub">Leadership, academic service, fundraising, and community involvement throughout Northeastern and beyond.</p>
+  <div class="lg">
+<div class="lc rv">
+<div class="lch"><div class="lci">ΤβΠ</div><div><div class="lct">Tau Beta Pi &mdash; President &amp; Secretary</div><div class="lco">Northeastern MA Gamma Chapter &middot; Jun 2022 &ndash; Present</div></div></div>
+<div class="lcb">Led the Massachusetts Gamma chapter of the nation&rsquo;s oldest engineering honor society &mdash; membership requires top 8% of the engineering class. As President, oversaw membership outreach, academic and social programming, and initiatory ceremonies. As Secretary, served as the main point of contact between the executive board, school administration, and TBP national headquarters.</div><div class="lcbul"><div class="lcli">Recruited and inducted new members each semester; organized semesterly service events.</div><div class="lcli">Managed interview proceedings, facilitated initiatory ceremonies, and ensured chapter compliance with Northeastern policies.</div></div>
+<div class="lcm"><div><div class="mn">Top 8%</div><div class="ml">Engineering Class</div></div><div><div class="mn">President</div><div class="ml">+ Secretary</div></div></div></div>
+<div class="lc rv d1">
+<div class="lch"><div class="lci">ΚΣ</div><div><div class="lct">Kappa Sigma &mdash; Grand Master &amp; AGC Chair</div><div class="lco">Northeastern Chapter &middot; Jan 2022 &ndash; Present</div></div></div>
+<div class="lcb">As Grand Master, oversaw all social, brotherhood, and philanthropy events and implemented new safety policies. As A Greater Cause Chair, established community outreach initiatives raising over $100,000 for charity through events including charity concerts, hockey games, and fundraisers.</div><div class="lcbul"><div class="lcli">1st Annual Kappa Sigma Fall Fest raised $28,500 for The Jimmy Fund/Dana-Farber Cancer Institute.</div><div class="lcli">Charity concerts raised $10,500+ for Boston Children&rsquo;s Hospital, $2,300+ for B.A.R.C.C., and $5,000+ for BFIT.</div><div class="lcli">BFIT 2023 campaign raised over $8,000 in collaboration with NUPD.</div></div>
+<div class="lcm"><div><div class="mn">$100K+</div><div class="ml">Raised for Charity</div></div><div><div class="mn">3 Roles</div><div class="ml">GM, AGC, Fundraising</div></div></div></div>
+<div class="lc rv">
+<div class="lch"><div class="lci">JIMMY<br>FUND</div><div><div class="lct">Jimmy Fund Fall Fest &mdash; Founder &amp; Advisor</div><div class="lco">Dana-Farber Cancer Institute &middot; Aug 2022 &ndash; Present</div></div></div>
+<div class="lcb">Founded the Kappa Sigma Jimmy Fund Fall Fest, growing it into a self-sustaining annual event now advised and continued by newer class members. Coordinated directly with Dana-Farber and partnered with local businesses for sponsorships.</div><div class="lcbul"><div class="lcli">1st Annual Fall Fest raised $28,500; combined first two Fall Fests raised over $55,000 total.</div><div class="lcli">Event has grown continuously &mdash; over $125,000 raised since inception across all editions.</div></div>
+<div class="lcm"><div><div class="mn">$125K+</div><div class="ml">Total Raised</div></div><div><div class="mn">DFCI</div><div class="ml">Beneficiary</div></div></div></div>
+<div class="lc rv d1">
+<div class="lch"><div class="lci">🤝</div><div><div class="lct">Community Service &amp; Volunteering</div><div class="lco">Greater Boston Area &middot; 2022 &ndash; Present</div></div></div>
+<div class="lcb">Committed to giving back across multiple community initiatives throughout and after college:</div><div class="lcbul"><div class="lcli"><strong>Fenway High School Tutoring</strong> (Sep 2022&ndash;Present) &mdash; Weekly after-school sessions helping students in complex subjects.</div><div class="lcli"><strong>Winter Gala</strong> (Jan 2024&ndash;Present) &mdash; Formal philanthropy event with casino games and live music benefiting the American Cancer Society.</div><div class="lcli"><strong>Relay for Life 2023</strong> &mdash; Team captain for the fraternity at the American Cancer Society&rsquo;s annual event.</div><div class="lcli"><strong>Mission Hill Cleanup</strong> (Sep 2022&ndash;Apr 2023) &mdash; Organized neighborhood cleanup groups in Mission Hill.</div></div>
+<div class="lcm"><div><div class="mn">4+</div><div class="ml">Active Initiatives</div></div><div><div class="mn">ACS</div><div class="ml">+ DFCI Partners</div></div></div></div>
+<div class="lc rv">
+<div class="lch"><div class="lci">🚑</div><div><div class="lct">Emergency Medical Technician</div><div class="lco">Springfield First Aid Squad &middot; 5+ Years</div></div></div>
+<div class="lcb">Certified EMT-B with 400+ hours of active service responding to 911 emergency calls. Provided first aid and coordinated patient care with police, fire, and hospital personnel. Served as Cadet Leader running training sessions and planning outreach events for the squad&rsquo;s cadet program.</div>
+<div class="lcm"><div><div class="mn">400+</div><div class="ml">Ride Hours</div></div><div><div class="mn">EMT-B</div><div class="ml">Certified NJ</div></div></div></div>
+<div class="lc rv d1">
+<div class="lch"><div class="lci">⚙️</div><div><div class="lct">Enabling Engineering Club</div><div class="lco">Northeastern University &middot; 2022 &ndash; 2024</div></div></div>
+<div class="lcb">Member and project lead for Enabling Engineering, Northeastern&rsquo;s club dedicated to engineering assistive technologies for people with disabilities. Led the Adaptive Bocce Project for the Boston Self Help Center, managing design, prototyping, testing, budgeting, and purchasing throughout.</div>
+<div class="lcm"><div><div class="mn">Eng. Lead</div><div class="ml">Project Role</div></div><div><div class="mn">Assistive</div><div class="ml">Technology Focus</div></div></div></div>
+  </div>
+</div>
+</section>
+<section id="interests">
+<div class="si">
+  <div class="slbl">06 &middot; Beyond Engineering</div>
+  <h2 class="sh">Who I Am Outside Work</h2>
+  <p class="ssub">The same discipline that makes me a better engineer shows up on the ice, in the weight room, and everywhere in between.</p>
+  <div class="intg">
+<div class="intc rv">
+<div class="intc-img" style="background:linear-gradient(135deg,#0f1e30,#0a1422)">🏒</div>
+<div class="intc-body"><div class="intc-title">Ice Hockey</div><div class="intc-text">Lifelong hockey player and New Jersey Devils fan. Hockey shaped how I compete, collaborate, and perform under pressure.</div></div></div>
+<div class="intc rv d1">
+<div class="intc-img" style="background:linear-gradient(135deg,#1a1020,#0f0a14)">🏋️</div>
+<div class="intc-body"><div class="intc-title">Weightlifting &amp; Calisthenics</div><div class="intc-text">Daily strength training and calisthenics for mental clarity and resilience &mdash; habits that carry directly into engineering work.</div></div></div>
+<div class="intc rv d2">
+<div class="intc-img" style="background:linear-gradient(135deg,#301020,#1e0a14)">🎻</div>
+<div class="intc-body"><div class="intc-title">Violin</div><div class="intc-text">Studied violin throughout school and continue to play. Music builds the focus and deliberate practice mindset that engineering demands.</div></div></div>
+<div class="intc rv">
+<div class="intc-img" style="background:linear-gradient(135deg,#1a2a10,#0f1a08)">🍳</div>
+<div class="intc-body"><div class="intc-title">Cooking</div><div class="intc-text">Passionate about cooking as a form of creative problem solving &mdash; iterating, testing, and refining in the kitchen mirrors the engineering process.</div></div></div>
+<div class="intc rv d1">
+<div class="intc-img" style="background:linear-gradient(135deg,#2a2a10,#1a1a08)">⛳</div>
+<div class="intc-body"><div class="intc-title">Golf</div><div class="intc-text">Golf demands precision, patience, and consistent repeatable technique &mdash; qualities that map directly onto engineering and process improvement.</div></div></div>
+<div class="intc rv d2">
+<div class="intc-img" style="background:linear-gradient(135deg,#102030,#081420)">🏃</div>
+<div class="intc-body"><div class="intc-title">Running</div><div class="intc-text">Active runner using structured training plans and data tracking. Long-term physical goal setting mirrors the engineering project mindset.</div></div></div>
+<div class="intc rv">
+<div class="intc-img" style="background:linear-gradient(135deg,#2a1010,#1a0808)">🧱</div>
+<div class="intc-body"><div class="intc-title">Legos &amp; 3D Printing</div><div class="intc-text">Hobbyist builder across Lego and FDM 3D printing. Designing and making things keeps hands-on problem-solving skills sharp outside of work.</div></div></div>
+<div class="intc rv d1">
+<div class="intc-img" style="background:linear-gradient(135deg,#10202a,#081420)">⚾</div>
+<div class="intc-body"><div class="intc-title">Sports Fan</div><div class="intc-text">Devoted New York Yankees, New York Giants, and New Jersey Devils fan. Sports provide a constant lens on teamwork, strategy, and execution under pressure.</div></div></div>
+  </div>
+</div>
+</section>
+<section id="contact">
+<div class="si">
+  <div class="slbl">07 &middot; Contact</div>
+  <div class="coi">
+    <div class="rv">
+      <h2 class="cocta">Let&rsquo;s build something <span>great</span> together.</h2>
+      <p class="cotxt">Interested in discussing engineering, product development, or potential opportunities? I&rsquo;d love to connect &mdash; whether you&rsquo;re a recruiter, hiring manager, or fellow engineer.</p>
+      <div class="clinks">
+        <a href="https://linkedin.com/in/ryanpotechin" target="_blank" class="cl"><div class="cli">in</div><div><div class="cllab">LinkedIn</div><div class="clsub">linkedin.com/in/ryanpotechin</div></div><div class="clarr">→</div></a>
+        <a href="mailto:potechin.ry@gmail.com" class="cl"><div class="cli">@</div><div><div class="cllab">Email</div><div class="clsub">potechin.ry@gmail.com</div></div><div class="clarr">→</div></a>
+        <a href="tel:+19739868446" class="cl"><div class="cli">☎</div><div><div class="cllab">Phone</div><div class="clsub">+1 (973) 986-8446</div></div><div class="clarr">→</div></a>
+        <a href="https://github.com/ryanpotechin" target="_blank" class="cl"><div class="cli">GH</div><div><div class="cllab">GitHub</div><div class="clsub">github.com/ryanpotechin</div></div><div class="clarr">→</div></a>
+        <a href="#" class="cl" onclick="alert('Add your resume PDF link here.');return false;"><div class="cli">↓</div><div><div class="cllab">Download Resume</div><div class="clsub">PDF &middot; Updated June 2026</div></div><div class="clarr">→</div></a>
+      </div>
+    </div>
+    <div class="rv d1">
+      <div class="slbl" style="margin-bottom:1rem">Send a Message</div>
+      <div class="cf">
+        <div class="fg"><label class="flbl">Name</label><input type="text" class="fi" placeholder="Your name"></div>
+        <div class="fg"><label class="flbl">Email</label><input type="email" class="fi" placeholder="your@email.com"></div>
+        <div class="fg"><label class="flbl">Company</label><input type="text" class="fi" placeholder="Optional"></div>
+        <div class="fg"><label class="flbl">Message</label><textarea class="fi" placeholder="What&rsquo;s on your mind?"></textarea></div>
+        <button class="bp" style="align-self:flex-start" onclick="alert('Connect to Formspree or a backend to enable email sending.')">Send Message →</button>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<footer>
+  <div class="fl2">© 2026 <span>Ryan Potechin</span> &middot; Biomedical &amp; Product Development Engineer &middot; Boston, MA</div>
+  <div class="fr"><a href="#hero">Top</a><a href="#projects">Projects</a><a href="#leadership">Leadership</a><a href="#contact">Contact</a></div>
+</footer>
+<div class="mo" id="m-jnj" onclick="hmc(event,'jnj')"><div class="md">
+<div class="mdh"><div class="pcat">Medical Manufacturing &middot; J&amp;J DePuy Synthes &middot; Raynham, MA</div>
+<h2 style="font-family:var(--fd);font-size:1.22rem;font-weight:700;color:var(--t1);margin-top:.2rem;padding-right:2.2rem">Robotic Grinding System &mdash; $3M+ ABB Automation</h2>
+<button class="mdc" onclick="cm('jnj')">✖</button></div>
+<div class="mdbody"><div class="mdl"><div class="mds"><div class="mdst">Project Context</div><p>As part of a $100M orthopedic manufacturing capacity expansion establishing a new foundry at DePuy Synthes, I serve as technical SME and lead engineer for $3M+ in new robotic equipment &mdash; directly enabling a 300% increase in orthopedic output capacity.</p></div><div class="mds"><div class="mdst">Technical Scope</div><p>Full ownership of a $3M+ customized ABB robotic grinding system: process characterization and DFM, ABB robot programming in RobotStudio covering 185 unique product programs maintaining &plusmn;5mm material remaining on 1M+ parts/year, commissioning (URS, FAT/SAT, OEM relationships), complete SBD/CSV-e/IQ/PV validation strategy, workholding fixture design in Siemens NX (DFM, material selection, GD&amp;T), reliability plan (EHS, PM schedule, spare parts, OEE targets), and Allen-Bradley PLC/HMI integration in GMP environment.</p></div><div class="mds"><div class="mdst">Results</div><p>On-time deployment supporting 1.5M+ units per year. Validated manufacturing process consistently achieving &plusmn;5mm material remaining across all 185 product families. Full GxP/GDP documentation package in PLM.</p></div>
+<div class="mds"><div class="mdst">Skills Demonstrated</div><div class="mdtags"><span class="tag tb">ABB RobotStudio</span><span class="tag">IQ/OQ/PV</span><span class="tag">Siemens NX</span><span class="tag">Allen-Bradley PLC</span><span class="tag">CSV-e/SBD</span><span class="tag">GD&T/DFM</span><span class="tag">GxP/GDP</span><span class="tag">PLM/DHR</span></div></div></div>
+<div class="mdr"><div class="mdr-head"><span class="mdr-title">🔒 Proprietary Files</span></div>
+<div class="mdr-fw"><div class="mdr-lock"><div class="mdr-lock-icon">&#x1F512;</div><p>Project documentation is proprietary to Johnson &amp; Johnson and cannot be shared publicly. Contact me directly to discuss the technical details of this work.</p></div></div></div></div></div></div>
+<div class="mo" id="m-dd" onclick="hmc(event,'dd')"><div class="md">
+<div class="mdh"><div class="pcat">Consumer Product &middot; MS Capstone &middot; Northeastern University</div>
+<h2 style="font-family:var(--fd);font-size:1.22rem;font-weight:700;color:var(--t1);margin-top:.2rem;padding-right:2.2rem">Disposal Defense &mdash; Garbage Disposal Safety Insert</h2>
+<button class="mdc" onclick="cm('dd')">✖</button></div>
+<div class="mdbody"><div class="mdl"><div class="mds"><div class="mdst">Problem</div><p>Individuals with garbage disposals frequently drop silverware and other non-food items into the drain, risking costly damage and injury. Existing products block water flow, require complex installation, or fail to stop the most common items.</p></div><div class="mds"><div class="mdst">Engineering Process</div><p>Ran a full structured PD process: 14-person user survey, 4-patent IP landscape search, competitive benchmarking of 4 existing products, 12 concept sketches across 5 categories, two rounds of Pugh matrix down-selection (12→6→1), and a 10-person preference study with audio-recorded interviews. The winning concept — &ldquo;Double Ramp&rdquo; — uses brachistochrone (cycloid) curves on both ramps to maximize water/food flow while deflecting rigid items like silverware. Both parts injection-moldable in Santoprene with press-fit pin-hole assembly.</p></div><div class="mds"><div class="mdst">Deliverables</div><p>Full engineering drawing package (Top Ramp, Bottom Ramp, assembly drawing), costed BOM ($3.00/unit; $30K tooling), physical FDM prototype tested in a real sink, and a 54-slide final presentation. All drawings are GD&amp;T-compliant with 1&deg; draft angles and uniform wall thickness for injection molding readiness.</p></div>
+<div class="mds"><div class="mdst">Skills Demonstrated</div><div class="mdtags"><span class="tag tb">SolidWorks</span><span class="tag">Injection Molding DFM</span><span class="tag">Engineering Drawings</span><span class="tag">BOM/Costing</span><span class="tag">User Research</span><span class="tag">Pugh Matrix</span><span class="tag">IP/Patent Search</span><span class="tag">FDM Prototyping</span><span class="tag">GD&T</span></div></div></div>
+<div class="mdr"><div class="mdr-head"><span class="mdr-title">📄 Final Presentation (54 slides)</span>
+<button class="mdr-btn prim" onclick="alert('Replace with your hosted file URL for Disposal_Defense_Final.pdf')">&#x2B07; Download</button></div>
+<div class="mdr-fw"><div class="mdr-ph"><div class="mdr-ph-icon">&#x1F4C4;</div>
+<p>Host <em>_ALT__Disposal_Defense-Phase_3_Development1.pdf</em> on Google Drive, enable sharing, then replace the iframe src with the viewer URL to display the slides here.</p>
+<span class="bhst" onclick="alert('1. Upload your file to Google Drive.\n2. Set sharing to Anyone with link.\n3. Get the file ID from the URL.\n4. Replace the iframe src with:\nhttps://drive.google.com/file/d/FILE_ID/preview\n\nFor PPTX, use Google Slides viewer URL instead.')">&#x1F517; How to host your file</span></div></div></div></div></div></div>
+<div class="mo" id="m-mc" onclick="hmc(event,'mc')"><div class="md">
+<div class="mdh"><div class="pcat">Medical App &middot; Bioengineering Capstone Lead &middot; Northeastern University</div>
+<h2 style="font-family:var(--fd);font-size:1.22rem;font-weight:700;color:var(--t1);margin-top:.2rem;padding-right:2.2rem">MedCheckMe &mdash; Smartphone Medical Diagnostic App</h2>
+<button class="mdc" onclick="cm('mc')">✖</button></div>
+<div class="mdbody"><div class="mdl"><div class="mds"><div class="mdst">Overview</div><p>Project lead on a 6-person capstone team sponsored by the Social Ventures Foundation building a smartphone-based medical screening app for underserved communities in Haiti and Costa Rica. Goal: all diagnostic checkups under $1 per patient.</p></div><div class="mds"><div class="mdst">Technical Scope</div><p>Four diagnostic modules: (1) Cardiology &mdash; PPG extracted from smartphone camera video, processed in MATLAB with band-pass filtering and pulse wave analysis to estimate heart rate and blood pressure; (2) Audiology &mdash; pure tone audiometry via earbuds, 250&ndash;8000 Hz; (3) Optometry &mdash; Tumbling E visual acuity and Ishihara color blindness plates; (4) Dermatology &mdash; dermoscopic skin lesion classification using ML. Hardware trade study selected Google Pixel 5. Backend: PostgreSQL on Google Cloud with encrypted, de-identified patient records.</p></div><div class="mds"><div class="mdst">My Role</div><p>Defined product requirements, led technical reviews across all four modules, developed the PPG signal processing pipeline in MATLAB, and managed all project documentation and design decision records across a full academic year.</p></div>
+<div class="mds"><div class="mdst">Skills Demonstrated</div><div class="mdtags"><span class="tag tb">MATLAB</span><span class="tag">PPG Signal Processing</span><span class="tag">Machine Learning</span><span class="tag">Android Dev</span><span class="tag">PostgreSQL</span><span class="tag">Product Requirements</span><span class="tag">Team Leadership</span></div></div></div>
+<div class="mdr"><div class="mdr-head"><span class="mdr-title">📊 Capstone Presentation</span>
+<button class="mdr-btn prim" onclick="alert('Replace with your hosted file URL for MedCheck_Presentation_3.pptx')">&#x2B07; Download</button></div>
+<div class="mdr-fw"><div class="mdr-ph"><div class="mdr-ph-icon">&#x1F4C4;</div>
+<p>Host <em>MedCheck_Presentation_3.pptx</em> on Google Drive, enable sharing, then replace the iframe src with the Google Slides viewer URL to embed it here.</p>
+<span class="bhst" onclick="alert('1. Upload your file to Google Drive.\n2. Set sharing to Anyone with link.\n3. Get the file ID from the URL.\n4. Replace the iframe src with:\nhttps://drive.google.com/file/d/FILE_ID/preview\n\nFor PPTX, use Google Slides viewer URL instead.')">&#x1F517; How to host your file</span></div></div></div></div></div></div>
+<div class="mo" id="m-res" onclick="hmc(event,'res')"><div class="md">
+<div class="mdh"><div class="pcat">Medical Device &middot; Catheter Development &middot; Resonetics LLC</div>
+<h2 style="font-family:var(--fd);font-size:1.22rem;font-weight:700;color:var(--t1);margin-top:.2rem;padding-right:2.2rem">Catheter Design &amp; V&amp;V &mdash; Resonetics</h2>
+<button class="mdc" onclick="cm('res')">✖</button></div>
+<div class="mdbody"><div class="mdl"><div class="mds"><div class="mdst">Scope</div><p>Designed and developed catheters for three clinical applications: transcatheter mitral valve replacement (TMVR), imaging catheters, and treatment of normal pressure hydrocephalus &mdash; all in an ISO-certified cleanroom at Resonetics in Westborough, MA.</p></div><div class="mds"><div class="mdst">Engineering Contributions</div><p>Performed tensile testing, tortuous anatomy testing, and V&amp;V studies to verify clinical performance against design inputs. Designed test fixtures in SolidWorks that improved manufacturing process efficiency by up to 20%. Collaborated with physicians and participated in animal studies to incorporate clinical feedback into iterative device designs. Authored manufacturing SOPs and implemented them on the production floor.</p></div>
+<div class="mds"><div class="mdst">Skills Demonstrated</div><div class="mdtags"><span class="tag tb">SolidWorks</span><span class="tag">Fixture Design (+20% efficiency)</span><span class="tag">V&V Testing</span><span class="tag">Tensile Testing</span><span class="tag">SOP Authoring</span><span class="tag">ISO Cleanroom</span><span class="tag">Physician Collaboration</span></div></div></div>
+<div class="mdr"><div class="mdr-head"><span class="mdr-title">🔒 Proprietary Files</span></div>
+<div class="mdr-fw"><div class="mdr-lock"><div class="mdr-lock-icon">&#x1F512;</div><p>Project documentation is proprietary to Resonetics LLC and protected by NDA. Contact me directly to discuss the engineering details of this work.</p></div></div></div></div></div></div>
+<div class="mo" id="m-ss" onclick="hmc(event,'ss')"><div class="md">
+<div class="mdh"><div class="pcat">Sports Technology &middot; Product Development &middot; Northeastern University</div>
+<h2 style="font-family:var(--fd);font-size:1.22rem;font-weight:700;color:var(--t1);margin-top:.2rem;padding-right:2.2rem">SkateSharp &mdash; Portable Skate Sharpening Device</h2>
+<button class="mdc" onclick="cm('ss')">✖</button></div>
+<div class="mdbody"><div class="mdl"><div class="mds"><div class="mdst">Problem</div><p>Skate sharpening has remained largely unchanged for decades — high long-term costs ($10–25 per session), inconsistency across technicians, time lost traveling to pro shops, and no solution for blade issues mid-game. A portable, consistent, and affordable device could address a real gap in the $500M market.</p></div><div class="mds"><div class="mdst">Engineering Approach</div><p>Defined core value propositions (portability, consistency via auto-alignment, affordability, versatility). Conducted competitor analysis against BladeMaster, ProSharp, and Sparx Hockey. Developed user personas for coaches, athletes, and parents. Identified a 10–15% target market share ($50–75M revenue potential). Applied Stage-Gate framework with defined exit criteria at each gate, and validated assumptions through user interviews. Refined initial scope to focus first-generation device on hockey skates before expanding to figure skating.</p></div>
+<div class="mds"><div class="mdst">Skills Demonstrated</div><div class="mdtags"><span class="tag tb">Product Strategy</span><span class="tag">Stage-Gate Framework</span><span class="tag">Competitor Analysis</span><span class="tag">User Personas</span><span class="tag">Market Sizing</span><span class="tag">Go-to-Market</span><span class="tag">Customer Discovery</span></div></div></div>
+<div class="mdr"><div class="mdr-head"><span class="mdr-title">📊 Final Presentation</span>
+<button class="mdr-btn prim" onclick="alert('Replace with your hosted file URL for SkateSharp_-_Final_Presentation__1_.pptx')">&#x2B07; Download</button></div>
+<div class="mdr-fw"><div class="mdr-ph"><div class="mdr-ph-icon">&#x1F4C4;</div>
+<p>Host <em>SkateSharp_-_Final_Presentation__1_.pptx</em> on Google Drive and replace the iframe src with the Google Slides viewer URL to embed it here.</p>
+<span class="bhst" onclick="alert('1. Upload your file to Google Drive.\n2. Set sharing to Anyone with link.\n3. Get the file ID from the URL.\n4. Replace the iframe src with:\nhttps://drive.google.com/file/d/FILE_ID/preview\n\nFor PPTX, use Google Slides viewer URL instead.')">&#x1F517; How to host your file</span></div></div></div></div></div></div>
+<div class="mo" id="m-ra" onclick="hmc(event,'ra')"><div class="md">
+<div class="mdh"><div class="pcat">Healthcare Tech &middot; MS Product Development &middot; Northeastern University</div>
+<h2 style="font-family:var(--fd);font-size:1.22rem;font-weight:700;color:var(--t1);margin-top:.2rem;padding-right:2.2rem">RapidAlign &mdash; ER Resource Management Platform</h2>
+<button class="mdc" onclick="cm('ra')">✖</button></div>
+<div class="mdbody"><div class="mdl"><div class="mds"><div class="mdst">Problem</div><p>Emergency departments are strained by overcrowding, misplaced equipment, and delayed bed assignments — driven by systems operating in silos. Existing RTLS and bed management software lack coordination during patient surges, leading to delayed care, staff burnout, and documentation errors.</p></div><div class="mds"><div class="mdst">Solution</div><p>RapidAlign: a unified ER platform integrating real-time bed tracking with automated availability notifications, RTLS-based equipment tracking, predictive analytics for patient surges, and role-specific task assignment dashboards. Designed for HIPAA compliance and rapid hospital adoption.</p></div><div class="mds"><div class="mdst">Validation &amp; Market</div><p>Interviewed 10 emergency department workers. 70% reported daily delays from resource silos. Target outcomes: 20% reduction in arrival-to-triage time, 30% faster resource location, 25% fewer disposition decision delays. TAM: $10B; Target Market: $1B (large metropolitan hospitals).</p></div>
+<div class="mds"><div class="mdst">Skills Demonstrated</div><div class="mdtags"><span class="tag tb">Customer Discovery</span><span class="tag">Market Sizing (TAM/EM/TM)</span><span class="tag">Hypothesis Validation</span><span class="tag">Competitive Analysis</span><span class="tag">Business Model Canvas</span><span class="tag">HIPAA Compliance</span></div></div></div>
+<div class="mdr"><div class="mdr-head"><span class="mdr-title">📄 Final Presentation</span>
+<button class="mdr-btn prim" onclick="alert('Replace with your hosted file URL for Final_Presentation___1_.pdf')">&#x2B07; Download</button></div>
+<div class="mdr-fw"><div class="mdr-ph"><div class="mdr-ph-icon">&#x1F4C4;</div>
+<p>Host the RapidAlign presentation PDF on Google Drive and replace the iframe src with the viewer URL to embed it here for visitors to read.</p>
+<span class="bhst" onclick="alert('1. Upload your file to Google Drive.\n2. Set sharing to Anyone with link.\n3. Get the file ID from the URL.\n4. Replace the iframe src with:\nhttps://drive.google.com/file/d/FILE_ID/preview\n\nFor PPTX, use Google Slides viewer URL instead.')">&#x1F517; How to host your file</span></div></div></div></div></div></div>
+<div class="mo" id="m-evar" onclick="hmc(event,'evar')"><div class="md">
+<div class="mdh"><div class="pcat">Medical Device &middot; Design of Implants &middot; Northeastern University</div>
+<h2 style="font-family:var(--fd);font-size:1.22rem;font-weight:700;color:var(--t1);margin-top:.2rem;padding-right:2.2rem">Endovascular Stent &mdash; Unmet Clinical Need</h2>
+<button class="mdc" onclick="cm('evar')">✖</button></div>
+<div class="mdbody"><div class="mdl"><div class="mds"><div class="mdst">Overview</div><p>As part of the Design of Implants course at Northeastern, collaborated with classmates and industry professionals to identify an unmet clinical need in the field of endovascular stents, design a solution to address it, and prepare documentation for a Notice of Invention submission.</p></div><div class="mds"><div class="mdst">Process</div><p>Engaged in clinical need identification through literature review, collaboration with practitioners, and market landscape analysis. Applied structured biomedical device design principles to translate identified clinical gaps into device requirements, design concepts, and engineering specifications appropriate for an implantable Class III medical device.</p></div>
+<div class="mds"><div class="mdst">Skills Demonstrated</div><div class="mdtags"><span class="tag tb">Implant Design</span><span class="tag">Clinical Need Identification</span><span class="tag">Notice of Invention</span><span class="tag">Design Controls</span><span class="tag">Regulatory Pathway</span><span class="tag">Biomedical Devices</span></div></div></div>
+<div class="mdr"><div class="mdr-head"><span class="mdr-title">📊 Project Presentation</span>
+<button class="mdr-btn prim" onclick="alert('Replace with your hosted file URL for EVAR_Final_Presentation.pptx')">&#x2B07; Download</button></div>
+<div class="mdr-fw"><div class="mdr-ph"><div class="mdr-ph-icon">&#x1F4C4;</div>
+<p>Host <em>EVAR_Final_Presentation.pptx</em> on Google Drive and replace the iframe src with the Google Slides viewer URL to display it here.</p>
+<span class="bhst" onclick="alert('1. Upload your file to Google Drive.\n2. Set sharing to Anyone with link.\n3. Get the file ID from the URL.\n4. Replace the iframe src with:\nhttps://drive.google.com/file/d/FILE_ID/preview\n\nFor PPTX, use Google Slides viewer URL instead.')">&#x1F517; How to host your file</span></div></div></div></div></div></div>
+<div class="mo" id="m-bocce" onclick="hmc(event,'bocce')"><div class="md">
+<div class="mdh"><div class="pcat">Adaptive Engineering &middot; Enabling Engineering &middot; Northeastern University</div>
+<h2 style="font-family:var(--fd);font-size:1.22rem;font-weight:700;color:var(--t1);margin-top:.2rem;padding-right:2.2rem">Adaptive Bocce Ramp &mdash; Boston Self Help Center</h2>
+<button class="mdc" onclick="cm('bocce')">✖</button></div>
+<div class="mdbody"><div class="mdl"><div class="mds"><div class="mdst">Challenge</div><p>The Boston Self Help Center’s adaptive bocce program needed an engineered ramp allowing participants with upper arm mobility limitations to play and compete. The device had to be safe, durable, easy for staff to set up, and manufacturable within project budget constraints.</p></div><div class="mds"><div class="mdst">Engineering Approach</div><p>Served as Engineering Lead within Enabling Engineering, managing a team from user needs capture at the Boston Self Help Center through SolidWorks modeling and simulation, then iterative physical prototyping using power tools and laser cutting equipment. Managed design, development, testing, budgeting, and purchasing for the project throughout its multi-semester duration.</p></div>
+<div class="mds"><div class="mdst">Skills Demonstrated</div><div class="mdtags"><span class="tag tb">SolidWorks</span><span class="tag">Laser Cutting</span><span class="tag">Power Tools</span><span class="tag">Team Leadership</span><span class="tag">User Needs Capture</span><span class="tag">Iterative Prototyping</span><span class="tag">Budget Management</span></div></div></div>
+<div class="mdr"><div class="mdr-head"><span class="mdr-title">📁 Project Files</span>
+<button class="mdr-btn prim" onclick="alert('Replace with your hosted file URL for bocce_project_files')">&#x2B07; Download</button></div>
+<div class="mdr-fw"><div class="mdr-ph"><div class="mdr-ph-icon">&#x1F4C4;</div>
+<p>Add CAD screenshots, prototype photos, or a design report here. Host the files online and update the iframe src to display them.</p>
+<span class="bhst" onclick="alert('1. Upload your file to Google Drive.\n2. Set sharing to Anyone with link.\n3. Get the file ID from the URL.\n4. Replace the iframe src with:\nhttps://drive.google.com/file/d/FILE_ID/preview\n\nFor PPTX, use Google Slides viewer URL instead.')">&#x1F517; How to host your file</span></div></div></div></div></div></div>
+<script>
+window.addEventListener('scroll',function(){
+  document.getElementById('sp').style.width=((window.scrollY/(document.documentElement.scrollHeight-window.innerHeight))*100)+'%';
+  document.getElementById('nb').classList.toggle('sc',window.scrollY>40);
+});
+var dt=document.getElementById('dt');
+dt.addEventListener('click',function(){document.body.classList.toggle('dark');dt.textContent=document.body.classList.contains('dark')?'☀️':'🌙';});
+function tmn(){document.getElementById('mn').classList.toggle('open');}
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)e.target.classList.add('vis');});},{threshold:.07});
+document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+function texp(c){var w=c.classList.contains('open');document.querySelectorAll('.ec').forEach(function(x){x.classList.remove('open');});if(!w)c.classList.add('open');}
+function fp(cat,btn){
+  document.querySelectorAll('.fb').forEach(function(b){b.classList.remove('act');});btn.classList.add('act');
+  document.querySelectorAll('.pc').forEach(function(c){if(cat==='all'){c.classList.remove('hid');return;}c.classList.toggle('hid',!(c.dataset.cat||'').includes(cat));});
+  var a=document.querySelector('.padd');if(a)a.style.display='';
+}
+function om(id){document.getElementById('m-'+id).classList.add('open');document.body.style.overflow='hidden';}
+function cm(id){document.getElementById('m-'+id).classList.remove('open');document.body.style.overflow='';}
+function hmc(e,id){if(e.target===e.currentTarget)cm(id);}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.mo.open').forEach(function(m){m.classList.remove('open');document.body.style.overflow='';});});
+</script>
+</body>
+</html>
